@@ -1,0 +1,46 @@
+﻿@model IEnumerable<OrderInfo>
+
+@if (Model.Count() > 0)
+{
+    int id = 0;//序号
+    foreach (var item in Model)
+    {
+        id++;
+        string buyId = "buy" + item.ItemCode;
+        string stateId = "state" +item.ItemCode;
+        string totle = (item.Price * item.QTY).ToString().ConvertToMoneyFormat();
+        <tr id="@buyId">
+            <td rowspan="2" style="border-bottom: 1px solid #666">@id</td>
+            <td>@item.Description</td>
+            <td id="qty-@item.ItemCode" class="colorRed">@item.QTY</td>
+            <td class="italic">@item.Price.ToString().ConvertToMoneyFormat()<span class="boxMenu_size" />/份</td>
+            <td>@totle</td>
+            <td></td>
+            <td id="stateId">已提交厨房</td>
+            <td><a data-menucode="@item.ItemCode" data-totle="@totle" data-billnumber="@item.BillNumber" data-qty="@item.QTY" data-id="@item.OrderNumber" onclick="deleteMenu(event)" data-seqid="" data-icon="delete" data-role="button" data-iconpos="notext" style="margin: .5em 40%;"></a></td>
+        </tr>
+        <tr style="border-bottom: 1px solid #666">
+            <td colspan="2" style="text-align: left;">@item.Remark</td>
+            <td></td>
+            <td>.00</td>
+            <td colspan="2"></td>
+            <td><a data-icon="edit" data-role="button" data-iconpos="notext" style="margin: .5em 40%;"></a></td>
+
+        </tr>
+    }
+}
+<tr id="beforeElement">
+    <td colspan="9">
+        <div class="ui-grid-a" id="beforeElement">
+            <div class="ui-block-a boxMenu_price">
+                <span class="boxMenu_size">已点数：</span><span id="orderNumber">@Model.Sum(p => p.QTY).ToString().ConvertMoneyToInt()</span><br />
+                <span class="boxMenu_size">总价：</span>￥ <span id="orderPrice">@Model.Sum(p => p.Price * p.QTY).ToString().ConvertToMoneyFormat()</span>
+            </div>
+            <div class="ui-block-b boxMPa">
+                <span class="boxMenu_size">时间：</span><span id="time" class="boxMenu_size">@DateTime.Now</span><br />
+                
+            </div>
+        </div>
+    </td>
+</tr>
+

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Menu>
+@if (Model.Count() > 0)
+{
+    int i = 0;
+    string color = "rgba(74, 20, 0,.85)";
+    <ul data-role="listview" id="menulist">
+        @foreach (Menu item in Model)
+        {
+            if (i % 2 == 1)
+            {
+                color = "rgba(92, 25, 0,.85)";
+            }
+            else
+            {
+                color = "rgba(74, 20, 0,.85)";
+            }
+            i++;
+            <li style="height: 124px; overflow: hidden;background:@color;">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        @{
+            string result = item.MenuCode.Last().ToString() + ".jpg";
+            <img src="~/Images/@result" style="width:104px;height:93px;" />
+                        }
+                    </div>
+                    <div class="ui-block-b">
+                        <div>
+                            <h3>@item.MenuDescription</h3>
+                            <h5>@item.EnglishDescription</h5>
+                            <p>@item.MenuDescription</p>
+                            <p class="hidden-p">@item.MenuDescription</p>
+                            <p class="detail-p">@item.MenuDescription</p>
+                        </div>
+                    </div>
+                    @*模拟菜品售空效果，真实效果根据字段的Sock状态*@
+                    @if (item.MenuDescription == "酸奶" || item.MenuDescription == "王老吉" || item.MenuDescription == "什菜沙拉" || item.MenuDescription == "热巧克力")
+                    {
+                        <span style="position: absolute; transform: rotate(45deg); -webkit-transform: rotate(45deg); width: 200px; border-top: 2px solid #FC0; border-bottom: 2px solid #FC0; background: #cf0305; color: white; top: 40px; right: -40px; text-align: center;">已售完</span>
+                    }
+                    else
+                    {
+                        <div class="ui-block-c">
+                            <div align="center" id="@item.MenuCode" style="visibility:hidden" data-status="N">
+                                @*<a onclick ="orderFood('-','@item.IsWeight','@item.IsBurdening','@item.MenuCode','@item.MenuDescription',@item.VisitorPrice.ToString().ConvertToMoneyFormat(),@item.MemberPrice.ToString().ConvertToMoneyFormat(),@item.RoomPrice.ToString().ConvertToMoneyFormat(),@item.StaffPrice.ToString().ConvertToMoneyFormat())" href="#" data-role="button" data-mini="true" data-theme="h" data-inline="true" data-corners="false">-1</a>*@
+                                <span id="menuNumber" class="order_but_digital">0</span>
+                                @*<a onclick="orderFood('+','@item.IsWeight','@item.IsBurdening','@item.MenuCode','@item.MenuDescription',@item.VisitorPrice.ToString().ConvertToMoneyFormat(),@item.MemberPrice.ToString().ConvertToMoneyFormat(),@item.RoomPrice.ToString().ConvertToMoneyFormat(),@item.StaffPrice.ToString().ConvertToMoneyFormat())" href="#" data-role="button" data-mini="true" data-theme="i" data-inline="true" data-corners="false">+1</a>*@
+                            </div>
+                            <div align="center">
+                                <h3>@item.VisitorPrice.ToString().ConvertToMoneyFormat()/ @item.Unit</h3>
+                            </div>
+                            <div align="center">
+                                <a onclick="openpop('@item.MenuCode.Last().ToString()', '@item.MenuDescription', '@item.EnglishDescription','@item.VisitorPrice.ToString().ConvertToMoneyFormat()', '@item.MemberPrice.ToString().ConvertToMoneyFormat()', '@item.RoomPrice.ToString().ConvertToMoneyFormat()', '@item.StaffPrice.ToString().ConvertToMoneyFormat()')" data-role="button" data-theme="g" data-inline="true" data-mini="true" data-corners="false">详情</a>
+                                <a onclick="orderDishes('@item.IsWeight','@item.IsBurdening','@item.IsCurrentPrice','@item.MenuCode','@item.MenuDescription',@item.VisitorPrice,@item.MemberPrice,@item.RoomPrice,@item.StaffPrice);" data-role="button" data-theme="g" data-inline="true" data-mini="true" data-corners="false">点菜</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <div style="margin-top: 30px">
+        <span style="margin-top: 60px">
+            <img src="@Url.Content("~/Content/images/cooker.png")" style="display:inline;vertical-align:middle" />
+            <h3 style="display: inline; color: #999; margin-left: 30px; text-shadow: 0 0;">当前分类没有对应的菜品，请更换类别</h3>
+        </span>
+    </div>
+}
+
+
+

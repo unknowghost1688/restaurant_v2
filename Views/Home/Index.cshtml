@@ -1,0 +1,1972 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/vops-custom-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/jquery.mobile.structure-1.3.2.min.css" rel="stylesheet" />
+    <link href="~/Content/Tabs.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1-vsdoc.js"></script>
+    <script src="~/Scripts/jquery-1.9.1.js"></script>
+    <script src="~/Scripts/jquery.mobile-1.3.2.js"></script>
+    <script src="~/Scripts/Tabs.js"></script>
+    <style>
+        #main .ui-panel-content-wrap{
+            background-image:url(@Url.Content("~/Content/images/mainpagebg.jpg"));
+
+        }
+        input#table.ui-input-text{
+            min-height: 0em;
+            line-height: 0em;
+        }
+        input#customerNumber.ui-input-text{
+            min-height: 0em;
+            line-height: 0em;
+        }
+        input#merberId.ui-input-text{
+            min-height: 0em;
+            line-height: 0em;
+        }
+        #mainHeader label
+        {
+            font-family:Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: blod;
+            color: #fff;
+            text-shadow: 0 0;
+            min-width: 60px;
+        }
+
+        #mainHeader .ui-field-contain label.ui-input-text
+        {
+            font-family:Arial, Helvetica, sans-serif;
+            text-shadow: 0 0;
+            font-weight: blod;
+            vertical-align: middle;
+            font-size: 14px;
+            display: inline-block;
+            width: 15%;
+            margin: 0 2% 0 0;
+        }
+
+        #mainHeader .ui-field-contain div.ui-input-text
+        {
+            width: 40%;
+            display: inline-block;
+            min-width: 60px;
+            border-radius:0;
+            height:32px;
+        }
+
+        #mainHeader .ui-grid-d .ui-block-a
+        {
+            width: 20%;
+            text-align: center;
+        }
+
+        #mainHeader .ui-grid-d .ui-block-b
+        {
+            width: 20%;
+            text-align: center;
+        }
+
+        #mainHeader .ui-grid-d .ui-block-c
+        {
+            width: 25%;
+            text-align: center;
+        }
+
+        #mainHeader .ui-grid-d .ui-block-d
+        {
+            width: 25%;
+            text-align: center;
+        }
+        #mainHeader .ui-grid-d .ui-block-e
+        {
+            width: 10%;
+            text-align: center;
+        }
+        #mainHeader .ui-grid-b .ui-block-a
+        {
+            width: 25%;
+            display: inline-block;
+        }
+
+        #mainHeader .ui-grid-b .ui-block-b
+        {
+            width: 50%;
+            display: inline-block;
+        }
+
+        #mainHeader .ui-grid-b .ui-block-c
+        {
+            width: 25%;
+            display: inline-block;
+        }
+        /*
+         *content
+         */
+        #menuHost
+        {
+            /*margin:18px 0 0 0;*/
+        }
+        /*
+        *菜单列表
+        */
+        #menulist
+        {
+            /*margin: 15px -15px;*/
+
+        }
+        ul#menulist li{
+            padding:5px;
+            border-top-width: 0px;
+        }
+        ul#menulist li div.ui-grid-b .ui-block-a
+        {
+            width: 120px;
+            height: 124px;
+            padding:10px;
+        }
+
+        ul#menulist li div.ui-grid-b .ui-block-b
+        {
+            padding:10px;
+        }
+
+        ul#menulist li div.ui-grid-b .ui-block-c
+        {
+            float: right;
+            width: 160px;
+            height: 124px;
+        }
+
+            ul#menulist li div.ui-grid-b .ui-block-c h3
+            {
+                margin: 5px 0 0 0;
+                font-size: 26px;
+                color: #FF9900;
+            }
+
+        ul#menulist h3
+        {
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 2px 0 0 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: #f1b054;
+            text-shadow:0 0;
+        }
+
+        ul#menulist h5
+        {
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 2px 0 0 0;
+            font-size: 14px;
+            font-weight: bold;
+            color: rgb(241, 176, 84);
+            text-shadow:0 0;
+        }
+
+        ul#menulist p
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #fff;
+            line-height: 18px;
+            margin: 5px 0 10px 0;
+            text-shadow:0 0;
+        }
+        /*
+        *menuPanel
+        */
+        #menuPanel{
+            background:rgb(255, 175, 82);
+        }
+        span.ui-btn-text{
+            text-shadow:0 0;
+            font-size:15px;
+        }
+        .hidden-p
+        {
+            display: none;
+        }
+
+        .detail-p
+        {
+            white-space: initial;
+        }
+
+        .ui-field-contain
+        {
+            margin: 5px;
+        }
+
+            .ui-field-contain label.ui-select
+            {
+                display: inline-block;
+                font-size: 10px;
+                width: 20%;
+                vertical-align: middle;
+            }
+
+            .ui-field-contain .ui-select
+            {
+                width: 50%;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+        .headBottomBg
+        {
+            background: #461301;
+            /*border-bottom: 1px solid #CCCCCC;*/
+            box-shadow: 1px 5px 6px 0px #270b00;
+            -moz-box-shadow: 1px 5px 6px 0px #270b00;
+            -webkit-box-shadow: 1px 5px 6px 0px #270b00;
+        }
+        .footer
+        {
+            background: #461301;
+            /*border-bottom: 1px solid #CCCCCC;*/
+            border:0;
+            box-shadow: 1px 5px 6px 0px #270b00;
+            -moz-box-shadow: 1px 5px 6px 0px #270b00;
+            -webkit-box-shadow: 1px 5px 6px 0px #270b00;
+            color: #fff;
+            text-shadow: 0 0;
+        }
+        .ui-input-search.ui-btn-corner-all
+        {
+            -webkit-border-radius: 0em;
+            border-radius: 0em;
+        }
+
+        .ui-li-static.ui-li
+        {
+            padding: 0;
+            display: block;
+        }
+
+        .order_but_digital
+        {
+            color: #fff;
+            font-size: 15px;
+            margin: .5em 5px;
+            vertical-align: middle;
+            text-shadow:0 0;
+        }
+
+        .ui-btn-active
+        {
+            border: 1px solid #2373a5;
+            background: #387bbe;
+            font-weight: bold;
+            color: #ffffff;
+            cursor: pointer;
+            text-shadow: 0 1px 0 #3373a5;
+            text-decoration: none;
+            background-image: -webkit-gradient(linear, left top, left bottom, from( #5393c5 ), to( #6facd5 ));
+            background-image: -webkit-linear-gradient( #5393c5, #6facd5 );
+            background-image: -moz-linear-gradient( #5393c5, #6facd5 );
+            background-image: -ms-linear-gradient( #5393c5, #6facd5 );
+            background-image: -o-linear-gradient( #5393c5, #6facd5 );
+            background-image: linear-gradient( #5393c5, #6facd5 );
+            background-repeat: no-repeat;
+            background-position:0 0;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        /*弹出框样式*/
+        .boxBg
+        {
+            border: 1px solid #ccc;
+            -moz-box-shadow: 1px 2px 2px #ccc;
+            -webkit-box-shadow: 1px 2px 2px #ccc;
+            box-shadow: 1px 2px 2px #ccc;
+        }
+
+        .boxText
+        {
+            font-size: 16px;
+            line-height: 14px;
+            color: #FF6600;
+            cursor: pointer;
+        }
+
+        .boxMenu
+        {
+            padding: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .boxBg th
+        {
+            color: #000;
+            text-align: left;
+        }
+
+        .boxMenu_img
+        {
+            margin-right: 5px;
+        }
+
+        .boxMenu_time
+        {
+            padding-right: 10px;
+        }
+
+        .boxMenu_line
+        {
+            border-bottom: 1px solid #ccc;
+            color: #666;
+        }
+
+        .boxMenu_line1
+        {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .boxMPa
+        {
+            padding-left: 10px;
+        }
+
+        .colorRed
+        {
+            color: #993300;
+        }
+
+        .italic
+        {
+            font-style: italic;
+        }
+
+        .boxMenu_height
+        {
+            line-height: 45px;
+            font-size: 16px;
+        }
+
+        .boxMenu_size
+        {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .boxMenu_price
+        {
+            color: #FF6600;
+            font-size: 24px;
+        }
+        div#buyFoodDiv.ui-content
+        {
+            margin: 0;
+            padding:0;
+        }
+        #buyFoodscroll{
+            overflow: auto;
+		    -webkit-overflow-scrolling: touch;
+        }
+        #orderPanel div.ui-panel-inner
+        {
+            padding: 0px;
+        }
+
+        #orderPanel
+        {
+            width: 100%;
+        }
+        #orderPanel table.ui-table-reflow.ui-responsive {
+            display: table;
+        }
+        #orderPanel th
+        {
+            font-family: "微软雅黑";
+            font-weight: normal;
+            font-size: 15px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        #orderPanel td
+        {
+            padding: 0px;
+            vertical-align:middle;
+            text-align:center;
+        }
+        #orderPanel .trBg{
+            background: #ccc;
+        }
+        #orderPanel div.ui-grid-a .ui-block-a
+        {
+            padding: 10px;
+            width: 60%;
+            max-width: 60%;
+        }
+
+        #orderPanel div.ui-grid-a .ui-block-b
+        {
+            padding: 20px;
+            text-align: right;
+            width: 40%;
+        }
+
+        .ui-grid-d
+        {
+            font-family: "微软雅黑";
+            font-weight: normal;
+            font-size: 10px;
+            text-align: center;
+        }
+
+            .ui-grid-d .ui-block-e
+            {
+            }
+
+            .ui-grid-d .ui-btn
+            {
+                margin-left: 40%;
+            }
+
+        .ui-panel-dismiss
+        {
+            width: 0;
+            height: 0;
+        }
+
+        .ul-style
+        {
+            background: #F8F8F8;
+            border: 1px solid #ccc;
+            -moz-box-shadow: 1px 2px 2px #ccc;
+            -webkit-box-shadow: 1px 2px 2px #ccc;
+            box-shadow: 1px 2px 2px #ccc;
+            padding: 0px;
+            margin-top: 0px;
+            width: 100px;
+        }
+
+        .ac_results
+        {
+            background: #fff;
+            border: 1px solid #7f9db9;
+            position: absolute;
+            z-index: 10000;
+            display: none;
+        }
+        #popupdetail-popup{
+            position:fixed;
+        }
+        #popupdetail-popup .ui-grid-a .ui-block-a
+        {
+            width: 50%;
+        }
+
+        #popupdetail-popup .ui-grid-a .ui-block-b
+        {
+            width: 50%;
+            padding: 15px 20px 0 10px;
+        }
+
+        #popupdetail-popup .ui-grid-a .ui-block-a h3
+        {
+            font-family: "微软雅黑";
+            margin: 2px 0 0 0;
+            text-shadow: 0 1px 0 #ccc;
+            font-size: 20px;
+            color: #993300;
+        }
+
+        #popupdetail-popup .ui-grid-a .ui-block-a h5
+        {
+            font-family: "微软雅黑";
+            margin: 2px 0 0 0;
+            text-shadow: 0 1px 0 #ccc;
+            font-size: 15px;
+            color: #555;
+        }
+
+        #popupdetail-popup .ui-grid-b .ui-block-b h2
+        {
+            font-family: "微软雅黑";
+            margin: 2px 0 0 0;
+            text-shadow: 0 0px 0 #ccc;
+            font-size: 25px;
+            color: #F0A642;
+        }
+
+        #popupdetail-popup .ui-grid-b .ui-block-b h3
+        {
+            font-family: "微软雅黑";
+            margin: 2px 0 0 0;
+            text-shadow: 0 1px 0 #ccc;
+            font-size: 15px;
+            color: #555;
+        }
+        /*菜品定义*/
+        #popupDefine-popup .ui-body-c{
+            border:0px;
+            color:#fff;
+            text-shadow: 0 0px 0 #ffffff;
+        }
+        #popupDefine-popup .ui-body-c .ui-link:hover {
+            color: #fff;
+        }
+        #popupDefine-popup .ui-body-c .ui-link:visited {
+            color: #fff;
+        }
+        #popupDefine-popup .ui-body-c .ui-link {
+            color: #fff;
+            font-weight: normal;
+        }
+        #popupDefine-popup{
+            position: fixed;
+            background: #4a1400;
+            opacity: 0.95;
+            -moz-opacity: 0.95;
+            filter: alpha(opacity=95);
+            padding: 10px;
+            min-width:650px;
+            width:80%;
+        }
+        #popupDefine-popup h4 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #f1b054;
+            }
+        #popupIngredients .ui-grid-a .ui-block-a{
+            width:200px;
+        }
+        #popupIngredients .ui-grid-a .ui-block-b{
+            float: right;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            text-shadow: 0 0px 0 #ccc;
+            color: #fff;
+            min-width:250px;
+            max-width:600px;
+            width:55%;
+        }
+        #popupIngredients{
+            background: #4a1400;
+            height:80%;
+        }
+        #ingredientsMenu {
+		    height: 400px;
+		    left: 0;
+		    overflow: auto;
+            /*position: fixed;*/
+		    -webkit-overflow-scrolling: touch;
+		    top: 0;
+		    width: 200px;
+		}
+        #ingredientsDetailItem{
+            height: 400px;
+		    left: 0;
+		    overflow: auto;
+            /*position: fixed;*/
+		    -webkit-overflow-scrolling: touch;
+		    top: 0;
+        }
+        #ingredientsMenu ul {
+		    margin: 40px 0;
+		    padding: 0;
+		}
+
+	    #ingredientsMenu li {
+		    list-style: none;
+		}
+
+	    #ingredientsMenu ul li a:link,
+	    #ingredientsMenu ul li a:visited {
+		    border-bottom: 1px solid #333;
+		    color: #fff;
+		    display: block;
+		    font-family: arial;
+		    font-size: 14px;
+		    padding: 10px 0px 10px 10px;
+		    text-decoration: none;
+		    text-shadow: 0px 1px 1px #000000;
+		}
+
+	    #ingredientsMenu ul li a:hover,
+	    #ingredientsMenu ul li a:active {
+		    background-color: #716F6F;
+		}
+        #ingredientsDetail li{
+            float:left;
+            max-width: 300px;
+            list-style: none;
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+        .require {
+            float: left;
+            margin-bottom: 14px;
+            margin-top: 4px;
+        }
+        .require li{margin:8px;}
+        .extrarqr a{
+            text-decoration: none;
+            color:#fff;
+            background:#a4a4a4;
+            padding:5px 16px;
+            background-image:none;
+        }
+        .extrarqr a:hover{
+            text-decoration: none;
+            color:#fff;
+            background:#a4a4a4;
+            padding:5px 16px;
+            background-image:none;
+        }
+        .normalrqr a{
+            text-decoration: none;
+            color:#fff;
+            background:#ce4901;
+            padding:5px 16px;
+            background-image:none;
+        }
+        .normalrqr a:hover{
+            text-decoration: none;
+            color:#fff;
+            background:#ce4901;
+            padding:5px 16px;
+            background-image:none;
+        }
+
+        /*菜品数量popup*/
+        #popupCount-popup{
+            position: fixed;
+            background: #4a1400;
+            opacity: 0.95;
+            -moz-opacity: 0.95;
+            filter: alpha(opacity=95);
+            padding: 10px;
+        }
+        #popupCount{
+            background: #4a1400;
+        }
+        #popupCount div.ui-grid-a .ui-block-a{
+            width:75%;
+        }
+        #popupCount div.ui-grid-a .ui-block-b{
+            width:25%;
+            min-width: 0px;
+            max-width: 600px;
+        }
+        #popupCount div.ui-grid-b .ui-block-a{
+            text-align: center;
+            width:33%;
+        }
+        #popupCount div.ui-grid-b .ui-block-b{
+            text-align: center;
+            width:33%;
+        }
+        #popupCount div.ui-grid-b .ui-block-c{
+            text-align: center;
+            width:33%;
+        }
+        #popupCount .ui-grid-solo{
+           text-align: center;
+        }
+        #popupCount .ui-grid-solo span.ui-btn-inner{
+            font-size: 12.5px;
+            padding: .55em 5px .5em;
+        }
+        div#popupCount .ui-field-contain label.ui-input-text{
+            text-align:center;
+            display:inline-block;
+            vertical-align:middle;
+            color:#fff;
+            text-shadow: 0 0px 0 #ffffff;
+        }
+        div#popupCount .ui-field-contain input.ui-input-text{
+            text-align:right;
+        }
+        div#popupCount h4{
+            font-size: 14px;
+            font-weight: bold;
+            color: #f1b054;
+            text-shadow: 0 0px 0 #ffffff;
+       }
+        /*价格popup*/
+        #popupPrice{
+            background: #4a1400;
+        }
+        #popupPrice div.ui-grid-a .ui-block-a{
+            width:75%;
+        }
+        #popupPrice div.ui-grid-a .ui-block-b{
+            width:25%;
+            min-width: 0px;
+            max-width: 600px;
+        }
+        #popupPrice div.ui-grid-b .ui-block-a{
+            text-align: center;
+            width:33%;
+        }
+        #popupPrice div.ui-grid-b .ui-block-b{
+            text-align: center;
+            width:33%;
+        }
+        #popupPrice div.ui-grid-b .ui-block-c{
+            text-align: center;
+            width:33%;
+        }
+        #popupPrice .ui-grid-solo{
+           text-align: center;
+        }
+        #popupPrice .ui-grid-solo span.ui-btn-inner{
+            font-size: 12.5px;
+            padding: .55em 5px .5em;
+        }
+        div#popupPrice .ui-field-contain label.ui-input-text{
+            text-align:center;
+            display:inline-block;
+            vertical-align:middle;
+            color:#fff;
+            text-shadow: 0 0px 0 #ffffff;
+        }
+        div#popupPrice .ui-field-contain input.ui-input-text{
+            text-align:right;
+        }
+        div#popupPrice h4{
+            font-size: 14px;
+            font-weight: bold;
+            color: #f1b054;
+            text-shadow: 0 0px 0 #ffffff;
+       }
+    </style>
+
+    <script type="text/javascript">
+        var orderArry = new Array();
+        var billOrderArray = new Array();
+        var orderObject = new Order();
+        var tableState;
+        $(document).ready(function () {
+            menuType = "Salable";
+            loadMenu(menuType);
+            $("#menuTyediv ul li a").click(function () {
+                menuType = $(this).attr("id");
+                loadMenu(menuType);
+                $("#search").val("");//切换菜品类别的时候，清空搜索条件
+            });
+
+            $("#logout").click(function () {
+                logout(false);
+            }
+           );
+
+            $("#search").keyup(function () {
+                var search = $(this).val();
+                searchFood(menuType, search);
+            });
+
+            $("#search").next().click(function () {
+                searchFood(menuType, "");
+            });
+
+            $("#table").keyup(function () {
+                var table = $(this).val();
+                searchTable(table);
+            });
+
+            $("#createBill").click(function () {
+                createBill();
+            });
+
+            $("#popupWeight a").bind("click", function () {
+
+                var text = $(this).text();
+
+                if ($(this).attr("id") != "cancel") {
+                    var value = "";
+                    value = $("#popupWeight input[type='text']").val();
+                    if (text == "." && value.indexOf(".") != -1) {
+                        return;
+                    }
+                    value += text;
+                    $("#popupWeight input[type='text']").val(value);
+                } else {
+                    if (text == "清空") {
+                        $("#popupWeight input[type='text']").val("");
+                    }
+                }
+
+            });
+            $("#popupPrice a").bind("click", function () {
+                if ($(this).attr("data-rel") == "back") {
+                    $("#popupPrice input[type='text']").val("");
+                    return;
+                }
+                var text = $(this).text();
+
+                if ($(this).attr("id") != "cancel") {
+                    var value = "";
+                    value = $("#popupPrice input[type='text']").val();
+                    if (text == "." && value.indexOf(".") != -1) {
+                        return;
+                    }
+                    value += text;
+                    $("#popupPrice input[type='text']").val(value);
+                } else {
+                    if (text == "清空") {
+                        $("#popupPrice input[type='text']").val("");
+                    }
+                }
+
+            });
+            $("#popupCount a[id!='confirmCount']").bind("click", function () {
+                if ($(this).attr("data-rel") == "back") {
+                    $("#popupCount input[type='text']").val("");
+                    return;
+                }
+                var text = $(this).text();
+
+                if ($(this).attr("id") != "clearCount") {
+                    var value = "";
+                    value = $("#popupCount input[type='text']").val();
+                    if (text == "." && value.indexOf(".") != -1) {
+                        return;
+                    }
+                    value += text;
+                    $("#popupCount input[type='text']").val(value);
+                } else {
+                    if ($(this).attr("id") == "clearCount") {
+                        $("#popupCount input[type='text']").val("");
+                    }
+                }
+
+            });
+            $('#verticalTab').easyResponsiveTabs({
+                type: 'vertical',
+                width: 'auto',
+                fit: true
+            });
+
+            $("#saveToService").click(function () {
+                saveOrderToService();
+            });
+            //end of ready
+        }
+            );
+
+        //根据大类获取菜品
+        function loadMenu(menuType) {
+            $.ajax({
+                url: "@Url.Action("FoodMenu", "Home")",
+                cache: false,
+                dataType: "html",
+                type: "get",
+                data: { MenuType: menuType },
+                beforeSend: function () {
+                    $.mobile.showPageLoadingMsg("a", "正在加载菜品...");
+                }
+            }).done(function (data) {
+                $.mobile.hidePageLoadingMsg();
+                $("#menuHost").empty();
+                $("#menuHost").append(data);
+                $("#menuHost").trigger("create");
+                if ($("#table") != undefined && $("#table").val() != undefined && $("#table").val() != "") {
+                    getOrderBytable($("#table").val());
+                }
+            }).fail(function (data) {
+                $.mobile.hidePageLoadingMsg();
+            });
+        }//end of function
+
+        //登出，其中的操作包括退出，然后再登陆
+        function logout() {
+            var userName = $("#userName").text();
+            var stationCode = $("#stationCode").text();
+            var outletCode = $("#outletCode").text();
+            $.ajax({
+                url: "@Url.Action("Logout", "Login")",
+                cache: false,
+                dataType: "json",
+                type: "post",
+                data: {
+                    outletCode: outletCode, stationCode: stationCode, userName: userName
+                },
+                beforeSend: function () {
+                    $.mobile.showPageLoadingMsg("a", "正在注销用户...");
+                }
+            }).done(function (data) {
+                switch (data.States) {
+                    case "Success":
+                        $.mobile.hidePageLoadingMsg();
+                        window.location.href = "@Url.Action("Index", "Login")";
+                        break;
+                    case "Error":
+                        $.mobile.hidePageLoadingMsg();
+                        alert("登出失败:原因代码" + data.Message);
+                        break;
+
+                }
+            }).fail(function (data) {
+                $.mobile.hidePageLoadingMsg();
+                showMessage(data.Message);
+            });
+        }
+
+        //菜单搜索
+        function searchFood(menuType, searchValue) {
+            if (searchValue.length >= 0) {
+                $.ajax({
+                    url: "@Url.Action("SearchFood", "Home")",
+                    cache: false,
+                    dataType: "html",
+                    type: "post",
+                    data: { Menutype: menuType, searchText: searchValue },
+                }).done(function (data) {
+                    if (data != undefined && data.length > 60) {
+                        $("#menuHost").empty();
+                        $("#menuHost").append(data)
+                        $("#menuHost").trigger("create");
+                        //getOrderBytable($("#table").val());获取当前桌号（如果有）的已点菜品
+                    }
+                }).fail(function (data) {
+                    $("#menuHost").append("<h1>获取数据失败</h1>");
+                });
+            }
+        }
+
+        //搜索桌号
+        function searchTable(table) {
+            if (table.length == 0) {
+                $("#searchTable").css({ "display": "none" });
+            } else {
+                $.ajax({
+                    url: "@Url.Action("GetTablesByTable", "Home")",
+                    cache: false,
+                    dataType: "json",
+                    type: "get",
+                    data: { tableCondition: table },
+                    beforeSend: function () {
+                    }
+                }).done(function (data) {
+                    if (data.length > 0) {
+                        $("#searchTable").css({ "display": "block" });
+                        $("#tableul").empty();
+                        $.each(data, function (i, item) {
+                            var table = "'" + item.TableDescription + "'";
+                            var state = "";
+                            if (item.Status == "1") {
+                                state = "空台";
+                            } else {
+                                state = "占用";
+                            }
+                            $('<li onclick="tableclick(' + table + ')" style="background:#f8f8f8;border-bottom: 1px solid #ccc;list-style-type:none;font-size: 16px;line-height: 40px;color: #FF6600;padding:5px;"><span>' + item.TableDescription + '</span><span>' + state + '</span></li>')
+                            .val(item.TableCode)
+                            .appendTo($("#tableul"));
+                        });
+                        if (data.length == 1 && data[0].TableDescription.toUpperCase() == $("#table").val().toUpperCase()) {
+                            $("#searchTable").css({ display: "none" });
+                            UpdateBillByTable($("#table").val());//更新已点菜单
+                            updateOrderByTable($("#table").val());//更新菜单列表已点
+                        } else {
+                            $("#customerNumber").val("");
+                            $("#customerType option[value=V]").attr("selected", "true");
+                            $("#merberId").val("");
+                            $("#buyFood").empty();
+                            $("#TableNum").text("桌号:");
+                            $("#billNumber").text("单号:");
+                            $("#table").attr("data-bill", "N");
+                            for (var i = 0; i < orderArry.length; i++) {
+                                $("#" + orderArry[i] + " #menuNumber").text(0);
+                                $("#" + orderArry[i]).css({ "visibility": "hidden" });
+                            }
+                        }
+                    } else {
+                        $("#searchTable").css({ display: "none" });
+                        $("#customerNumber").val("");
+                        $("#customerType option[value=V]").attr("selected", "true");
+                        $("#merberId").val("");
+                        $("#buyFood").empty();
+                        $("#TableNum").text("桌号:");
+                        $("#billNumber").text("单号:")
+                        $("#table").attr("data-bill", "N");
+                        for (var i = 0; i < orderArry.length; i++) {
+                            $("#" + orderArry[i] + " #menuNumber").text(0);
+                            $("#" + orderArry[i]).css({ "visibility": "hidden" });
+                        }
+                    }
+                }).fail(function (data) {
+                    $("#searchTable").css({ display: "none" });
+                });
+            }
+        }
+
+        //点击table
+        function tableclick(table) {
+            $("#table").val(table);
+            $("#searchTable").css({ display: "none" });
+            UpdateBillByTable(table);
+            updateOrderByTable(table);
+            //$("#billNumber").text("单号:" + $("#table").attr("data-bill"))
+        }
+
+        //弹出菜单详细
+        function openpop(code, menuDes, englishDes, price, memberPrice, roomPrice, staffPrice) {
+            $("#popupdetail").popup("open");
+            $("#menuImage").attr({ src: "/Images/" + code + ".jpg" });
+            $("#menuDes").empty().text(menuDes);
+            $("#englishDes").empty().text(englishDes);
+            $("#price").empty().text(price);
+            $("#memberPrice").empty().text("会员价格:" + memberPrice);
+            $("#roomPrice").empty().text("房客价格:" + roomPrice);
+            $("#staffPrice").empty().text("员工价格:" + staffPrice);
+        }
+        //点菜弹出备注
+        function openIngredients(isWeight, isBurdening, isCurrentPrice, menuCode, menuDescription, visitorPrice, memberPrice, roomPrice, staffPrice) {
+            //$("#popupDefine").popup("open");
+            //if (isWeight && isWeight == "Y") {
+            //    $("#popupWeight").popup("open");
+            //}
+            //if (isCurrentPrice && isCurrentPrice == "Y") {
+            //    $("#popupPrice").popup("open");
+            //}
+            //if (isBurdening != undefined && isBurdening == "Y") {
+            //    $("#popupIngredients").popup("open");
+            //}
+            /*
+            orderDishes(menuCode, menuDescription, visitorPrice);*/
+
+        }
+        //通过备注类型获取备注
+        function loadRemark(remarkTypeCode) {
+            if (remarkTypeCode != undefined && remarkTypeCode != "") {
+                $.ajax({
+                    url: "@Url.Action("Remark", "Home")",
+                    cache: false,
+                    dataType: "html",
+                    type: "post",
+                    data: { remarkType: remarkTypeCode },
+                    beforeSend: function () {
+                        $.mobile.showPageLoadingMsg("a", "正在加载备注...");
+                    }
+                }).done(function (data) {
+                    $.mobile.hidePageLoadingMsg();
+                    if (data != undefined && data.length > 60) {
+                        $("#ingredientsDetailItem").empty();
+                        $("#ingredientsDetailItem").append(data)
+                        $("#popupIngredients").trigger("create");
+                    }
+                }).fail(function (data) {
+                    $.mobile.hidePageLoadingMsg();
+                    alert(data.responseText);
+                });
+            }
+        }
+
+        //点击选择备注信息
+        function selectRemark(remarkId) {
+            if (remarkId != undefined && remarkId != "" && remarkId != null) {
+                var $selectedRemark = $("#" + remarkId);
+                $selectedRemark.toggleClass(function () {
+                    if ($selectedRemark.attr("class") == "normalrqr") {
+                        $selectedRemark.removeClass("normalrqr");
+                        return 'extrarqr';
+                    } else {
+                        $selectedRemark.removeClass("extrarqr");
+                        return 'normalrqr';
+                    }
+                });
+            }
+        }
+
+        //通过桌号更新账单信息
+        function UpdateBillByTable(table) {
+            $.ajax({
+                url: "@Url.Action("GetBillByTable", "Home")",
+                cache: false,
+                dataType: "json",
+                type: "get",
+                data: { tableCode: table },
+                beforeSend: function () {
+                }
+            }).done(function (data) {
+                if (data != undefined && data.BillNumber != null) {
+                    $("#TableNum").text("桌号:" + table);
+                    $("#billNumber").text("单号:" + data.BillNumber);
+                    $("#table").attr("data-bill", data.BillNumber);
+                    $("#customerNumber").val(data.CustomerNumber);
+                    $("#customerType option[value=" + data.CustomerType + "").attr("selected", "true");
+                    if (data.CustomerType == "M") {
+                        $("#merberId").val(data.MemberId);
+                    }
+                }
+            }).fail(function (data) {
+                $("#searchTable").css({ display: "none" });
+            });
+        }
+
+        //根据桌号获取已点菜品
+        function getBuyFood(table) {
+            $.ajax({
+                url: "@Url.Action("BuyFood", "Home")",
+                cache: false,
+                dataType: "html",
+                type: "get",
+                data: { tableCode: table },
+                beforeSend: function () {
+                }
+            }).done(function (data) {
+                $("#buyFood").empty();
+                $("#buyFood").append(data)
+                $("#buyFood").trigger("create");
+            }).fail(function (data) {
+
+            });
+        }
+
+        //通过桌号获取已点菜品，并且更新菜单列表，以反映点菜
+        function getOrderBytable(table) {
+            orderArry.splice(0);
+            billOrderArray.splice(0);//清空已点菜品
+            $.ajax({
+                url: "@Url.Action("GetOrderByTable", "Home")",
+                cache: false,
+                dataType: "json",
+                type: "get",
+                data: { tableCode: table },
+                beforeSend: function () {
+                }
+            }).done(function (data) {
+                if (data != undefined) {
+                    $.each(data, function (i, item) {
+                        $("#" + item.ItemCode).css({ "visibility": "visible" });//找到点菜+ —按钮，并且设置为显示
+                        var menuNumber = $("#" + item.ItemCode + " #menuNumber").text();
+                        if (parseFloat(menuNumber) != 0) {
+                            $("#" + item.ItemCode + " #menuNumber").text(parseFloat(item.QTY) + parseFloat(menuNumber));//找到数量按钮，设置已点的数量
+                        } else {
+                            $("#" + item.ItemCode + " #menuNumber").text(item.QTY);
+                        }
+                        orderArry.push(item.ItemCode);
+                    });
+                }
+            }).fail(function (data) {
+                $("#searchTable").css({ display: "none" });
+            });
+        }
+
+        //根据桌号同时更新以点菜品，和菜单列表的上以点菜品
+        function updateOrderByTable(table) {
+            getBuyFood(table);
+            getOrderBytable(table);
+        }
+
+        //开台
+        function createBill() {
+            var tableCode = $("#table").val();
+            var customerType = $("#customerType").val();
+            var memberId = $("#merberId").val();
+            var cover = $("#customerNumber").val();
+            var result = ValidateBillImformation(tableCode, customerType, memberId, cover);
+            if (result == true) {
+                var isCreate = confirm("桌号:" + tableCode + "\n" + "客户类型:" + getCustomerType(customerType) + "\n" + "人数:" + cover + "\n" + "ID:" + memberId + "\n" + "确认开台吗?");
+                if (isCreate) {
+                    $.ajax({
+                        url: "@Url.Action("CreateBill", "Home")",
+                        cache: false,
+                        dataType: "json",
+                        type: "post",
+                        data: { tableCode: tableCode, customerType: customerType, memberId: memberId, cover: cover, waiter: "" },
+                        beforeSend: function () {
+                            $.mobile.showPageLoadingMsg("a", "正在开台...");
+                        }
+                    }).done(function (data) {
+                        $.mobile.hidePageLoadingMsg();
+                        if (data != undefined) {
+                            if (data.State == "Succeed") {
+                                $("#TableNum").text("桌号:" + $("#table").val());
+                                $("#billNumber").text("单号:" + data.BillNumber);
+                                $("#table").attr("data-bill", data.BillNumber);
+                                alert("开台成功");
+                            } else {
+                                alert(data.Message);
+                            }
+                        }
+                    }).fail(function (data) {
+                        $.mobile.hidePageLoadingMsg();
+                        alert(data.responseText);
+                    });
+                }
+            }
+        }
+
+        //验证账单信息
+        function ValidateBillImformation(tableCode, customerType, memberId, cover) {
+            var result = true;
+            var message = "";
+
+            if ($("#table").attr("data-bill") != "N") {
+                message = "该桌号已经开台，不允许再次开台\n";
+                result = false;
+            } else {
+                if (tableCode == undefined || tableCode == "") {
+                    message = "请输入桌号\n";
+                    result = false;
+                }
+
+                if (customerType == "M" || customerType == "R" || customerType == "S") {
+                    if (memberId == undefined || memberId == "") {
+                        message += "请输入会员/房间/员工号\n";
+                        result = false;
+                    }
+                }
+
+                if (cover == undefined || cover == "") {
+                    message += "请输入人数\n";
+                    result = false;
+                }
+            }
+            if (message != "") {
+                alert(message);
+            }
+            return result;
+        }
+
+        //根据客户类型获取客户名称
+        function getCustomerType(customerType) {
+            var customer = "";
+            if (customerType != undefined && customerType != "") {
+                switch (customerType) {
+                    case "V":
+                        customer = "普通客";
+                        break;
+                    case "M":
+                        customer = "会员";
+                        break;
+                    case "R":
+                        customer = "酒店客";
+                        break;
+                    case "S":
+                        customer = "员工";
+                        break;
+                    case "O":
+                        customer = "其他";
+                        break;
+                }
+            }
+
+            return customer;
+        }
+
+        //点击点菜按钮时的点餐操作
+        function orderDishes(isWeight, isBurdening, isCurrentPrice, menuCode, menuDes, visitorPrice, memberPrice, roomPrice, staffPrice) {
+            if ($("#table").attr("data-bill") == "N") {
+                alert("请选择已经开台的桌子进行点菜操作");
+            } else {
+                if (isWeight != "Y" && isBurdening != "Y" && isCurrentPrice != "Y") {
+                    $("#popupCount").popup("open");
+                    $("#confirmCount").unbind("click");
+                    $("#confirmCount").bind("click", function () {
+                        var $count = $("#txtCount").val();
+                        if ($count != undefined && $count != "") {
+                            var price = getPriceByCustomerType($("#customerType").val(), visitorPrice, memberPrice, roomPrice, staffPrice);
+                            var qty = parseFloat($count);
+                            var oMenuId = $("#" + menuCode);//获取点菜按钮上方的+-区域
+                            if ($(oMenuId).css("visibility") == "hidden") {
+                                $(oMenuId).css("visibility", "visible");
+                            }
+                            var oNumber = $("#" + menuCode + " #menuNumber")
+                            $(oNumber).text(parseFloat($(oNumber).text()) + qty);
+                            var id = $("#beforeElement").prev().prev().children().first().text();
+                            if (id != undefined && id != "") {
+                                id = parseInt(id);
+                            }
+                            else {
+                                id = 0;
+                            }
+                            insertHtml(menuCode, id + 1, menuDes, qty, price, price * qty, "");//参数不全
+                            $("#orderNumber").text(parseFloat($("#orderNumber").text()) + qty);//已点菜单上的已点数+1
+                            $("#orderPrice").text(parseFloat($("#orderPrice").text()) + price * qty);//已点菜单上的总价+price
+                            orderArry.push($(oMenuId).attr("id"));//添加谋单号已点菜品的缓存,当单号不正确的时候，需要隐藏份数
+                            var billNumber = $("#billNumber").text();
+                            billOrderArray.push(new Order(billNumber, menuCode, menuDes, price, qty, price * qty, "0", "N", "", "", id + 1));//缓存已点菜品
+                            $("#txtCount").val("");
+                            $("#popupCount").popup("close");
+                            return;
+                        } else {
+                            alert("请输入份数");
+                        }
+                    })
+                } else {
+                    //3个状态不为空的时候
+                }
+            }
+        }
+
+        function getPriceByCustomerType(customerType, visitorPrice, memberPrice, roomPrice, staffPrice) {
+            var price = 0;
+            switch (customerType) {
+                case "V":
+                    price = visitorPrice;
+                    break;
+                case "M":
+                    price = memberPrice;
+                    break;
+                case "R":
+                    price = roomPrice;
+                    break;
+                case "S":
+                    price = staffPrice;
+                case "O":
+                    break;
+                    price = 0;
+            }
+
+            return price;
+        }
+
+        function saveOrderToService() {
+            if ($("#table").attr("data-bill") == "N") {
+                alert("请选择正确的已开台的桌号进行提交菜品");
+            } else {
+                if (billOrderArray.length == 0) {
+                    alert("您未点任何菜品！");
+                } else {
+                    if (confirm("确认下单吗?")) {
+                        jsonData = JSON.stringify(billOrderArray);
+                        $.ajax({
+                            url: "@Url.Action("CreateBillOrderItem", "Home")",
+                            cache: false,
+                            dataType: "json",
+                            type: "post",
+                            data: { jsonData: jsonData },
+                            beforeSend: function () {
+                                $.mobile.showPageLoadingMsg("正在向服务器提交已点菜品");
+                            }
+                        }).done(function (data) {
+                            if (data != undefined) {
+                                $.mobile.hidePageLoadingMsg();
+                                switch (data.State) {
+                                    case "Succeed":
+                                        alert("下单成功");
+                                        refOrders();
+                                        billOrderArray.splice(0);
+                                        break;
+                                    case "Fail":
+                                        alert("下单失败:" + data.Message);
+                                        //是否回退状态?
+                                        break;
+                                }
+                            }
+                        }).fail(function (data) {
+                            $.mobile.hidePageLoadingMsg();
+                            alert(data.responseText);
+                        });
+                    }
+                }
+            }
+        }
+
+        function refOrders() {
+            var table = $("#table").val();
+            $.ajax({
+                url: "@Url.Action("BuyFood", "Home")",
+                cache: false,
+                dataType: "html",
+                type: "get",
+                data: { tableCode: table },
+                beforeSend: function () {
+                    $.mobile.showPageLoadingMsg("正在获取已点菜品");
+                }
+            }).done(function (data) {
+                $("#buyFood").empty();
+                $("#buyFood").append(data)
+                $("#buyFood").trigger("create");
+                $.mobile.hidePageLoadingMsg();
+            }).fail(function (data) {
+                $.mobile.hidePageLoadingMsg();
+                alert(data.responseText);
+            });
+        }
+
+        function insertHtml(menuCode, id, menudes, qty, price, totle, reamrk) {
+            var html = '<tr id="' + "buy" + menuCode + '">' +
+                      '<td rowspan="2" style="border-bottom: 1px solid #666">' + id + '</td>' +
+                      '<td>' + menudes + '</td>' +
+                      '<td id=' + 'qty-' + menuCode + ' class="colorRed">' + qty + '</td>' +
+                      '<td class="italic">' + price + '<span class="boxMenu_size"/>/份</td>' +
+                      '<td>' + totle + '</td>' +
+                      '<td></td>' +
+                      '<td id="' + "state" + menuCode + '" style="color:red">未提交厨房</td>' +
+                      '<td><a data-id="N" data-seqid="' + id + '" onclick="deleteMenu(event)" data-icon="delete" data-role="button" data-iconpos="notext" style="margin: .5em 40%;"></a></td>' +
+                      '</tr>' +
+                      '<tr style="border-bottom: 1px solid #666">' +
+                      '<td colspan="2" style="text-align: left;">' + reamrk + '</td>' +
+                      '<td></td>' +
+                      '<td>.00</td>' +
+                      '<td colspan="2"></td>' +
+                      '<td><a data-icon="edit" data-role="button" data-iconpos="notext" style="margin: .5em 40%;"></a></td>' +
+                      '</tr>';
+            $("#beforeElement").before(html);
+            $("#buyFood").trigger("create");
+        }
+
+        //点击—+时的点餐操作
+        function orderFood(opeartion, isWeight, isBurdening, menuCode, menuDescription, visitorPrice, memberPricem, roomPrice, staffPrice) {
+            if ($("#table").attr("data-bill") == "N") {
+                alert("请选择已经开台的桌子进行点菜操作");
+            }
+            else {
+                switch (opeartion) {
+                    case "+":
+                        var oMenuId = $("#" + menuCode);//获取点菜按钮上方的+-区域
+                        var oNumber = $("#" + menuCode + " #menuNumber");//
+                        if (parseInt($(oNumber).text()) == 0) {
+                            $(oNumber).text(parseInt($(oNumber).text()) + 1);
+                            insertHtml();
+                            $("#orderNumber").text(parseInt($("#orderNumber").text()) + 1);
+                            $("#orderPrice").text(parseFloat($("#orderPrice").text()) + price);
+                            return;
+                            //插入html，修改分数，和金额
+                        }
+
+                        if (parseInt($(oNumber).text()) >= 1) {//可直接修改份数
+                            $(oNumber).text(parseInt($(oNumber).text()) + 1);
+                            $("#qty-" + menuCode + "").text(parseInt($(oNumber).text()));
+                            $("#orderNumber").text(parseInt($("#orderNumber").text()) + 1);
+                            $("#orderPrice").text(parseFloat($("#orderPrice").text()) + visitorPrice);
+                            return;
+                        }
+                        break;
+                    case "-":
+                        var oMenuId = $("#" + menuCode);//获取点菜按钮上方的+-区域
+                        var oNumber = $("#" + menuCode + " #menuNumber");//
+                        if (parseInt($(oNumber).text()) == 0) {
+                            alert("您还没有点菜，不能减少分数");
+                        }
+
+                        if (parseInt($(oNumber).text()) == 1) {
+                            $(oNumber).text(parseInt($(oNumber).text()) - 1);
+                            var buyMenu = $("#buy" + menuCode + "");
+                            $(buyMenu).next().remove();
+                            $(buyMenu).remove();
+                            $("#orderNumber").text(parseInt($("#orderNumber").text()) - 1);
+                            $("#orderPrice").text(parseFloat($("#orderPrice").text()) - visitorPrice);
+                            $(oMenuId).css("visibility", "hidden");
+                            return;
+                        }
+
+                        if (parseInt($(oNumber).text()) > 1) {
+                            $(oNumber).text(parseInt($(oNumber).text()) - 1);
+                            $("#qty-" + menuCode + "").text(parseInt($(oNumber).text()));
+                            $("#orderNumber").text(parseInt($("#orderNumber").text()) - 1);
+                            $("#orderPrice").text(parseFloat($("#orderPrice").text()) - visitorPrice);
+                            return;
+                        }
+                        break;
+                }
+            }
+        }
+
+        function Order(billNumber, menuCode, menuDes, price, qty, trxAmt, weight, takeway, remark, remarkGroup, seqId) {
+            this.BillNumber = billNumber;
+            this.MenuCode = menuCode;
+            this.MenuDes = menuDes;
+            this.Price = price;
+            this.QTY = qty;
+            this.TrxAmt = trxAmt;
+            this.Weight = weight;
+            this.Takeway = takeway;
+            this.Reamrk = remark;
+            this.ReamrkGrop = remarkGroup;
+            this.SeqId = seqId;
+        }
+
+        function deleteMenu(oEvent) {
+            var eObject = oEvent.target;
+            var $oDelete = $(eObject).parent().parent();
+            var $orderNumber = $oDelete.attr("data-id");
+            var $orderSeq = $oDelete.attr("data-seqid");
+            if ($orderNumber != undefined && $orderNumber == "N") {//删除未提交到服务器的数据
+                if ($orderSeq != undefined && $orderSeq != "") {
+                    if (confirm("确定删除该菜品?")) {
+                        var id = getIndex($orderSeq);
+                        if (id > -1) {
+                            var deleteOrder = billOrderArray.splice(id, 1);
+                            if (deleteOrder != undefined && deleteOrder != null) {
+                                var buyMenu = $oDelete.parent().parent();
+                                var menuCode = deleteOrder[0].MenuCode;
+                                var $menu = $("#" + menuCode + "");
+                                var $menuNumber = $("#" + menuCode + " #menuNumber");
+                                $(buyMenu).next().remove();
+                                $(buyMenu).remove();
+                                $menuNumber.text(parseFloat($menuNumber.text()) - parseFloat(deleteOrder[0].QTY));
+                                $("#orderNumber").text(parseInt($("#orderNumber").text()) - parseFloat(deleteOrder[0].QTY));
+                                $("#orderPrice").text(parseFloat($("#orderPrice").text()) - parseFloat(deleteOrder[0].TrxAmt));
+                                if (parseFloat($menuNumber.text()) == 0) {
+                                    $menu.css("visibility", "hidden");
+                                }
+                                alert("删除成功")
+                            } else {
+                                alert("删除失败");
+                            }
+                        } else {
+                            alert("删除失败");
+                        }
+                    }
+                } else {
+                    alert("不能删除该菜品，请联系管理员删除")
+                }
+            } else {//删除已经提交的数据
+                if (confirm("该菜品已经下单，请确认厨房没有开始处理菜品。确认删除?")) {
+                    var billNumber = $oDelete.attr("data-billnumber");
+                    var menuCode = $oDelete.attr("data-menucode");
+                    var voidqty = $oDelete.attr("data-qty");
+                    var totle = $oDelete.attr("data-totle");
+                    var billNumber = $("#table").attr("data-bill");
+                    $.ajax({
+                        url: "@Url.Action("VoidMenuOrder", "Home")",
+                        cache: false,
+                        dataType: "json",
+                        type: "post",
+                        data: { billNo: billNumber, MenuCode: menuCode, OrderNumber: $orderNumber, voidQty: parseInt(voidqty), voidRemark: "reamrk" },
+                        beforeSend: function () {
+                            $.mobile.showPageLoadingMsg("正在删除菜品");
+                        }
+                    }).done(function (data) {
+                        if (data!=undefined) {
+                            switch (data.State) {
+                                case "Succeed":
+                                    var buyMenu = $oDelete.parent().parent();
+                                    var $menu = $("#" + menuCode + "");
+                                    var $menuNumber = $("#" + menuCode + " #menuNumber");
+                                    $(buyMenu).next().remove();
+                                    $(buyMenu).remove();
+                                    $menuNumber.text(parseFloat($menuNumber.text()) - parseFloat(voidqty));
+                                    $("#orderNumber").text(parseInt($("#orderNumber").text()) - parseFloat(voidqty));
+                                    $("#orderPrice").text(parseFloat($("#orderPrice").text()) - parseFloat(totle));
+                                    if (parseFloat($menuNumber.text()) == 0) {
+                                        $menu.css("visibility", "hidden");
+                                    }
+                                    $.mobile.hidePageLoadingMsg();
+                                    alert("删除成功");
+                                    break;
+                                case "Fail":
+                                    $.mobile.hidePageLoadingMsg();
+                                    alert(data.Message);
+                                    break;
+                            }
+                        }
+                    }).fail(function (data) {
+                        $.mobile.hidePageLoadingMsg();
+                        alert(data.responseText);
+                    });
+                }
+            }
+        }
+
+        function getIndex(elementIdToFind) {
+            var i;
+            for (i = 0; i < billOrderArray.length; i += 1) {
+                if (billOrderArray[i].SeqId === parseInt(elementIdToFind)) {
+                    return i;
+                }
+            }
+            return -1; //not found
+        }
+    </script>
+</head>
+<body>
+    <div data-role="page" id="main">
+        <div id="mainHeader" data-role="header" data-tap-toggle="false" data-position="fixed" data-fullscreen="false" style="background: none; border: none;">
+            <!--Head-->
+            <!--head top-->
+            <div class="ui-grid-d" style="overflow:visible;height:50px;padding:15px 0;background-image:url(@Url.Content("~/Content/images/topbar.jpg"));background-repeat:repeat-x;">
+                <div class="ui-block-a" data-mini="true">
+                    <div data-role="fieldcontain">
+                        <label for="table" style="min-width: 50px;">桌号：</label>
+                        <div style="position: relative; display: inline;">
+                            <input type="text" data-bill="N" id="table" data-theme="b" value="">
+                            <div id="searchTable" style="display: none; position: absolute; left: 5px; overflow: visible; z-index: 10000">
+                                <ul id="tableul" class="ul-style"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div data-role="fieldcontain">
+                        <label for="customerNumber" style="min-width: 50px;">人数：</label>
+                        <input type="text" id="customerNumber" data-theme="b" value="" data-clear-btn="true" />
+                    </div>
+                </div>
+                <div class="ui-block-c">
+                    <div data-role="fieldcontain">
+                        <label for="customerType" style="min-width: 80px;">客户类型：</label>
+                        <select id="customerType" style="font-size: 18px; font-weight: 700; height: 35px" data-role="none" data-mini="true" data-theme="c" data-corners="false">
+                            <option value="V">普通客</option>
+                            <option value="M">会员</option>
+                            <option value="R">酒店客</option>
+                            <option value="S">员工</option>
+                            <option value="O">其他</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="ui-block-d">
+                    <div data-role="fieldcontain">
+                        <label for="merberId" style="min-width: 70px;">会员号：</label>
+                        <input type="text" id="merberId" data-theme="b" value="">
+                    </div>
+                </div>
+                <div class="ui-block-e">
+                    <a id="createBill" data-role="button" data-theme="f" data-corners="false" style="margin: 4px 10px;">开台</a>
+                </div>
+            </div>
+            <!--headbottom-->
+            <div class="headBottomBg ui-grid-b" style="overflow: visible; height: 41px">
+                <div class="ui-block-a"><a href="#menuPanel" data-role="button" data-corners="false" data-theme="f" data-icon="grid" data-inline="true" data-mini="true">菜品类别</a> </div>
+                <div class="ui-block-b">
+                    <input type="search" name="password" id="search" placeholder="请输入查询条件..." data-inline="true" data-mini="true" data-theme="c">
+                </div>
+                <div class="ui-block-c" style="text-align: right"><a href="#orderPanel" data-role="button" data-corners="false" data-theme="f" data-icon="check" data-inline="true" data-mini="true">已选菜肴</a> </div>
+            </div>
+        </div>
+        <div id="menuHost" data-role="content">
+        </div>
+        <!--popupdetail-->
+        <div data-role="popup" id="popupdetail" data-overlay-theme="a" data-theme="d" data-corners="false" data-dismissible="false">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            <img id="menuImage" class="popphoto" src="@Url.Content("~/Content/images/orderImg3.jpg")" style="width: 500px;" />
+            <div class="ui-grid-a" style="position: absolute; bottom: 0; width: 100%; background: rgba(253, 248, 248, 0.8);">
+                <div class="ui-block-a">
+                    <h3 id="menuDes">美味辣虾</h3>
+                    <h5 id="englishDes">Delicious spicy shrimp</h5>
+                </div>
+                <div class="ui-block-b">
+                    <p style="margin: 0 0 0 0; color: #FF6600; font-size: 24px; text-shadow: 0 0; font-family: '微软雅黑'; font-weight: bold;"><span id="price" style="font-size: 18px">80.00</span>元/例</p>
+                    <p style="margin: 5px 0 5px 0; color: #FE7E16; font-size: 18px; text-shadow: 0 0; font-family: '微软雅黑';"><span id="memberPrice">会员价格:80.00</span></p>
+                    <p style="margin: 0 0 0 0; color: #666; font-size: 14px; text-shadow: 0 0; font-family: '微软雅黑';"><span id="roomPrice" style="margin-right: 10px;">房客价格:80.00</span> <span id="staffPrice">员工价格:80.00</span></p>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <!--popupCount-->
+        <div data-role="popup" id="popupCount" data-corners="false" data-dismissible="false">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>
+            <h4>请输入菜品数量:</h4>
+            <div data-role="fieldcontain">
+                <input type="text" id="txtCount" disabled="true" /><label for="txtCount" style="text-align: center;">份</label>
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <div class="ui-grid-b">
+                        <div class="ui-block-a">
+                            <a href="#" data-role="button" data-mini="true" data-corners="false" data-inline="true">1</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#" data-role="button" data-mini="true" data-corners="false" data-inline="true">2</a>
+                        </div>
+                        <div class="ui-block-c">
+                            <a href="#" data-role="button" data-mini="true" data-corners="false" data-inline="true">3</a>
+                        </div>
+                        <div class="ui-block-a">
+                            <a href="#" data-role="button" data-mini="true" data-corners="false" data-inline="true">4</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#" data-role="button" data-mini="true" data-corners="false" data-inline="true">5</a>
+                        </div>
+                        <div class="ui-block-c">
+                            <a href="#" data-role="button" data-mini="true" data-corners="false" data-inline="true">6</a>
+                        </div>
+                        <div class="ui-block-a">
+                            <a href="#" data-role="button" data-mini="true" data-corners="false" data-inline="true">7</a>
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#" data-role="button" data-mini="true" data-corners="false" data-inline="true">8</a>
+                        </div>
+                        <div class="ui-block-c">
+                            <a href="#" data-role="button" data-mini="true" data-corners="false" data-inline="true">9</a>
+                        </div>
+                        <div class="ui-block-a">
+                            <a href="#" data-role="button" data-mini="true" data-corners="false" data-inline="true">.</a>
+
+                        </div>
+                        <div class="ui-block-b">
+                            <a href="#" data-role="button" data-mini="true" data-corners="false" data-inline="true">0</a>
+                        </div>
+                        <div class="ui-block-c">
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="ui-grid-solo">
+                        <div class="ui-block-solo">
+                            <a id="clearCount" href="#" data-role="button" data-inline="true" data-mini="true" data-corners="false" style="height: 75px;">清空</a>
+                        </div>
+
+                    </div>
+                    <div class="ui-grid-solo">
+                        <div class="ui-block-solo">
+                            <a id="confirmCount" href="#" data-role="button" data-inline="true" data-mini="true" data-corners="false" style="height: 75px;">确定</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--popupDefine-->
+        <div data-role="popup" id="popupDefine" data-corners="false" data-dismissible="false">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>
+            <div id="verticalTab">
+                <ul class="resp-tabs-list">
+                    <li>备注</li>
+                    <li>重量</li>
+                    <li>价格</li>
+                </ul>
+
+                <div class="resp-tabs-container">
+
+                    <div id="popupIngredients">
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <nav id="ingredientsMenu">
+                                    @Html.Action("RemarkType", "Home", new { type = "A" })
+                                </nav>
+                            </div>
+                            <div class="ui-block-b">
+                                <div id="ingredientsDetail">
+                                    <nav id="ingredientsDetailItem">
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popupWeight">
+                        <div data-role="fieldcontain">
+                            <input type="text" id="txtWeight" disabled="true" style="color: #000;" /><label for="txtWeight" style="text-align: center;">kg</label>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-grid-b">
+                                    <div class="ui-block-a">
+                                        <a href="#" data-role="button">1</a>
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <a href="#" data-role="button">2</a>
+                                    </div>
+                                    <div class="ui-block-c">
+                                        <a href="#" data-role="button">3</a>
+                                    </div>
+                                    <div class="ui-block-a">
+                                        <a href="#" data-role="button">4</a>
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <a href="#" data-role="button">5</a>
+                                    </div>
+                                    <div class="ui-block-c">
+                                        <a href="#" data-role="button">6</a>
+                                    </div>
+                                    <div class="ui-block-a">
+                                        <a href="#" data-role="button">7</a>
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <a href="#" data-role="button">8</a>
+                                    </div>
+                                    <div class="ui-block-c">
+                                        <a href="#" data-role="button">9</a>
+                                    </div>
+                                    <div class="ui-block-a">
+                                        <a href="#" data-role="button">.</a>
+                                        <!--<a href="#" data-role="button" data-mini="true" data-inline="true">C</a>-->
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <a href="#" data-role="button">0</a>
+                                    </div>
+                                    <div class="ui-block-c">
+                                        <a id="cancel" href="#" data-role="button">清空</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b" style="display: none;">
+                                <div class="ui-grid-solo">
+                                    <div class="ui-block-solo">
+                                        <a href="#" data-role="button" data-inline="true" data-mini="true" data-corners="false" style="height: 75px;">清空</a>
+                                    </div>
+
+                                </div>
+                                <div class="ui-grid-solo">
+                                    <div class="ui-block-solo">
+                                        <a href="#" data-role="button" data-inline="true" data-mini="true" data-corners="false" style="height: 75px;">确定</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popupPrice">
+                        <div data-role="fieldcontain">
+                            <input type="text" id="txtWeight" disabled="true" style="color: #000;" /><label for="txtWeight" style="text-align: center;">元</label>
+                        </div>
+                        <div class="ui-grid-a">
+                            <div class="ui-block-a">
+                                <div class="ui-grid-b">
+                                    <div class="ui-block-a">
+                                        <a href="#" data-role="button">1</a>
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <a href="#" data-role="button">2</a>
+                                    </div>
+                                    <div class="ui-block-c">
+                                        <a href="#" data-role="button">3</a>
+                                    </div>
+                                    <div class="ui-block-a">
+                                        <a href="#" data-role="button">4</a>
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <a href="#" data-role="button">5</a>
+                                    </div>
+                                    <div class="ui-block-c">
+                                        <a href="#" data-role="button">6</a>
+                                    </div>
+                                    <div class="ui-block-a">
+                                        <a href="#" data-role="button">7</a>
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <a href="#" data-role="button">8</a>
+                                    </div>
+                                    <div class="ui-block-c">
+                                        <a href="#" data-role="button">9</a>
+                                    </div>
+                                    <div class="ui-block-a">
+                                        <a href="#" data-role="button">.</a>
+                                        <!--<a href="#" data-role="button" data-mini="true" data-inline="true">C</a>-->
+                                    </div>
+                                    <div class="ui-block-b">
+                                        <a href="#" data-role="button">0</a>
+                                    </div>
+                                    <div class="ui-block-c">
+                                        <a href="#" id="cancel" data-role="button">取消</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ui-block-b" style="display: none;">
+                                <div class="ui-grid-solo">
+                                    <div class="ui-block-solo">
+                                        <a href="#" data-role="button" data-inline="true" data-mini="true" data-corners="false" style="height: 75px;">清空</a>
+                                    </div>
+
+                                </div>
+                                <div class="ui-grid-solo">
+                                    <div class="ui-block-solo">
+                                        <a href="#" data-role="button" data-inline="true" data-mini="true" data-corners="false" style="height: 75px;">确定</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span style="float: right; margin: 5px 10px;">
+                <a href="#" data-rel="back" data-role="button" data-icon="delete" data-mini="true" data-theme="h" data-inline="true" data-corners="false">Cancel</a>
+                <a href="#" data-role="button" data-icon="check" data-mini="true" data-theme="i" data-inline="true" data-corners="false">Confirm</a>
+            </span>
+        </div>
+        <div id="menuPanel" data-role="panel" data-position-fixed="true" data-position="left" data-display="reveal">
+            <div id="menuTyediv" data-role="navbar" data-iconpos="right">
+                @if ((ViewBag.MajorsList as IDictionary<string, string>).Count() > 1)
+                {
+
+                    foreach (KeyValuePair<string, string> item in ViewBag.MajorsList as IDictionary<string, string>)
+                    {
+
+                        <ul>
+                            <li><a id="@item.Key" data-theme="e" style="border-right-width: 0px;">@item.Value</a></li>
+                        </ul>
+                    }
+                }
+                else
+                {
+                    <ul>
+                        <li><a href="#">该区域没有分类</a></li>
+                    </ul>
+                }
+            </div>
+        </div>
+        <!--order panel-->
+        <div data-role="panel" id="orderPanel" data-display="overlay" data-position-fixed="true" data-position="right" data-theme="e">
+            <div id="buyFoodDiv" data-role="content">
+                <nav id="buyFoodscroll">
+                    <table data-role="table" class="ui-responsive">
+                        <thead style="background: #461301; color: #fff; border: none; -webkit-box-shadow: 0 0 10px rgba(0, 0,0, 1);">
+                            <tr style="border-bottom: 1px solid #fff;">
+                                <th colspan="9" style="border: 0px;">
+                                    <a href="#" data-rel="close" style="float: left;" data-role="button" data-mini="true" data-icon="delete" data-iconpos="notext" data-theme="f">Close</a>
+                                    <h3 id="TableNum"></h3>
+                                    <h3 id="billNumber"></h3>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th rowspan="2">编号</th>
+                                <!--<th rowspan="2">单号</th>-->
+                                <th>菜品名称</th>
+                                <th rowspan="2">数量</th>
+                                <th rowspan="2">单价</th>
+                                <th>价格</th>
+                                <th rowspan="2">税</th>
+                                <th rowspan="2">状态</th>
+                                <th>删除</th>
+                            </tr>
+                            <tr>
+                                <th>菜品备注</th>
+                                <th>附加费</th>
+                                <th>修改备注</th>
+                            </tr>
+                        </thead>
+                        <tbody id="buyFood"></tbody>
+
+                    </table>
+                    <a id="saveToService" data-role="button" data-theme="f" data-mini="true" data-inline="true" data-corners="false" class="ui-btn-right">确定</a>
+                </nav>
+            </div>
+        </div>
+
+        <div data-role="footer" class="footer" data-position="fixed" data-theme="c" data-tap-toggle="false">
+            @{
+                UserInfo user = new UserInfo();
+                string meal = string.Empty;
+            }
+            @if (Session["UserInfo"] != null && (UserInfo)Session["UserInfo"] != null)
+            {
+                user = (UserInfo)Session["UserInfo"];
+            }
+            else
+            {
+                <script type="text/javascript">
+                    alert("注意，Session丢失");
+                    document.location.href = "@Url.Action("Index", "Login")";
+                </script>
+            }
+            @if (Session["MealInfo"] != null)
+            {
+                meal = Session["MealInfo"].ToString();
+            }
+            else
+            {
+                <script type="text/javascript">
+                    alert("注意，Session丢失");
+                    document.location.href = "@Url.Action("Index", "Login")";
+                </script>
+            }
+            <div data-role="fieldcontain" style="text-align: right;">
+                <label>用户名:</label>
+                <span id="userName" style="margin-right: 20px;">@user.UserName</span>
+                <label>销售点:</label>
+                <span id="outletCode" style="margin-right: 20px;">@user.OutletCode</span>
+                <label>收银台:</label>
+                <span id="stationCode" style="margin-right: 20px;">@user.StationCode</span>
+                <label>膳食期间:</label>
+                <span style="margin-right: 20px;">@meal</span><a id="logout" data-role="button" data-inline="true" data-mini="true" data-corners="false">登出</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
